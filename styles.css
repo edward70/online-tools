@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.appbar {
+  padding: 1.2em 0;
+  padding: 3.5vmin 0;
+  text-align: center;
+  background: #434398;
+}
+
+.appbar a {
+  color: #fafafa;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-size: 3vh;
+}
+
+.container {
+  max-width: 70%;
+  margin: auto;
+  line-height: 1.45;
+}
+
+button {
+  background: #434398;
+  padding: 0.5em 1em;
+  border: 0;
+  border-radius: 0.5em;
+  font-family: system-ui, sans-serif;
+  color: #fafafa;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  height: 20%;
+  height: 20vh;
+}
+
+p, button, textarea, input, select, h1, h2, h3, h4, h5, h6, iframe, .coinmarketcap-currency-widget {
+  margin: 1em 0 0 0;
+}
+
+@keyframes fade {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+#result {
+  display: none;
+}
+
+footer {
+  padding: 1.5em;
+  text-align: center;
+  font-weight: 500;
+}
+
+iframe[data-aa] {
+  display: block;
+  transform-origin: 0 0;
+}
+
+/* Scale banner ads responsively so they don't break UI *grimace* */
+
+@media all and (min-width: 320px) { 
+  iframe[data-aa] {
+    transform: scale(0.55);
+  }
+}
+
+@media all and (min-width: 375px) { 
+  iframe[data-aa] {
+    transform: scale(0.65);
+  }
+}
+
+@media all and (min-width: 425px) { 
+  iframe[data-aa] {
+    transform: scale(0.7);
+  }
+}
+
+@media all and (min-width: 590px) { 
+  iframe[data-aa] {
+    transform: none;
+  }
+}

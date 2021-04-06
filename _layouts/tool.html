@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ page.displayname }} • Online Tools</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <meta name="generator" content="Jekyll">
+    <meta name="theme-color" content="#434398">
+    <link rel="me" href="https://github.com/edward70" type="text/html">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <section role="banner" class="appbar">
+      <a href="../">Online Tools</a>
+    </section>
+    <main role="main" class="container">
+      <h3>{{ page.displayname }}</h3>
+      {{ content }}
+      <h3>About the {{ page.type }}</h4>
+      <p>{{ page.description }}</p>
+      {{ site.ad }}
+      <h3>About {{ page.subject }}</h3>
+      <p>{{ page.subjectdescription }}</p>
+      <h3>Tools</h3>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.layout == 'textTool' or page.layout == 'tool' %}
+            <li><a href="../{{ page.directory }}/">{{ page.displayname }}</a></li>
+          {% endif %}
+        {% endfor %}
+        <li>More coming soon...</li>
+      </ul>
+      <h3>About</h3>
+      <p>{{ site.about }}</p>
+    </main>
+    <footer role="contentinfo">Made by Edward</footer>
+  </body>
+</html>
